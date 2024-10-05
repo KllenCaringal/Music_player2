@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Music</title>
+    <link href="/css/create.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="text-center mb-4">Upload a Song</h2>
+            <form method="POST" action="/create" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Song Title</label>
+                    <input type="text" name="title" class="form-control" placeholder="Enter song title" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="artist" class="form-label">Artist</label>
+                    <input type="text" name="artist" class="form-control" placeholder="Enter artist name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="song_file" class="form-label">Song File</label>
+                    <input type="file" name="song_file" class="form-control-file" accept=".mp3,.wav,.flac" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="image_file" class="form-label">Album Image</label>
+                    <input type="file" name="image_file" class="form-control-file" accept="image/*" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Upload Song</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/scripts/create.js"></script>
+</body>
+</html>
